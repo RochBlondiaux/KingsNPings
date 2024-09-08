@@ -9,6 +9,15 @@ player/player-doorin-right.png,78,58
 player/player-doorout-right.png,78,58
 player/player-dead-right.png,78,58
 
+#box
+environment/box/prop-box-intact.png,21,16
+environment/box/prop-box-destroyed.png,40,33
+
+#door
+environment/door/prop-door-intact.png,46,56
+environment/door/prop-door-damaged.png,46,56
+environment/door/prop-door-destroyed.png,46,56
+
 #particles
 player/particles/player-jump-particles.png,176,160
 player/particles/player-fall-particles.png,176,160

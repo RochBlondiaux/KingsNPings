@@ -5,10 +5,13 @@ import de.gurkenlabs.litiengine.entities.Spawnpoint;
 import de.gurkenlabs.litiengine.environment.Environment;
 import de.gurkenlabs.litiengine.environment.EnvironmentListener;
 import de.gurkenlabs.litiengine.environment.GameWorld;
+import de.gurkenlabs.litiengine.environment.PropMapObjectLoader;
 import de.gurkenlabs.litiengine.graphics.Camera;
 import de.gurkenlabs.litiengine.graphics.LocationLockCamera;
 import de.gurkenlabs.litiengine.resources.Resources;
 import me.rochblondiaux.kingsnpigs.entities.Player;
+import me.rochblondiaux.kingsnpigs.entities.environment.Box;
+import me.rochblondiaux.kingsnpigs.entities.environment.Door;
 
 public class GameManager {
 
@@ -22,7 +25,8 @@ public class GameManager {
         Resources.spritesheets().loadFrom("sprites/sprites.info");
 
         // Props
-        // PropMapObjectLoader.registerCustomPropType(Door.class);
+        PropMapObjectLoader.registerCustomPropType(Box.class);
+        PropMapObjectLoader.registerCustomPropType(Door.class);
         // PropMapObjectLoader.registerCustomPropType(Bottle.class);
         // PropMapObjectLoader.registerCustomPropType(Bomb.class);
 
@@ -42,14 +46,36 @@ public class GameManager {
                 // Camera
                 Camera camera = new LocationLockCamera(player);
                 world.setCamera(camera);
-                camera.setZoom(1f, 0);
-                camera.setFocus(player.getCenter());
+                camera.setZoom(2f, 750);
 
-                // Player
-                player.setControlsEnabled(true);
 
-                camera.setClampToMap(true);
-                spawn.spawn(player);
+                Door door = (Door) e.getProp("start");
+                if (door != null) {
+                    player.setControlsEnabled(false);
+                    player.setVisible(false);
+
+                    spawn.spawn(player);
+                    Game.loop().perform(750, () -> {
+                        door.setDoorState(Door.State.OPENING);
+
+                        Game.loop().perform(200, () -> {
+                            player.setVisible(true);
+                            player.animations().play("player-doorout-right");
+                        });
+
+                        camera.setClampToMap(true);
+                        Game.loop().perform(1500, () -> {
+                            camera.setFocus(player.getCenter());
+                            camera.setZoom(1f, 750);
+                            player.setControlsEnabled(true);
+                        });
+                    });
+                } else {
+                    camera.setZoom(1f, 0);
+                    camera.setFocus(player.getCenter());
+                    camera.setClampToMap(true);
+                    spawn.spawn(player);
+                }
             }
         });
 
