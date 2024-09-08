@@ -1,0 +1,15 @@
+#player
+player/player-idle-right.png,78,58
+player/player-jump-right.png,78,58
+player/player-walk-right.png,78,58
+player/player-dead.png,78,58
+player/player-fall-right.png,78,58
+player/player-ground-right.png,78,58
+player/player-doorin-right.png,78,58
+player/player-doorout-right.png,78,58
+player/player-dead-right.png,78,58
+
+#particles
+player/particles/player-jump-particles.png,176,160
+player/particles/player-fall-particles.png,176,160
+player/particles/player-walk-particles.png,176,160

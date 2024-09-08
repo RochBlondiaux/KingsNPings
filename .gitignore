@@ -36,3 +36,8 @@ build/
 
 ### Mac OS ###
 .DS_Store
+config.properties
+
+crash.txt
+
+game.log

@@ -12,7 +12,7 @@
     <!-- properties -->
     <properties>
         <main.class>me.rochblondiaux.kingsnpigs.GameLauncher</main.class>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
         <log4j.version>2.24.0</log4j.version>
     </properties>
 
