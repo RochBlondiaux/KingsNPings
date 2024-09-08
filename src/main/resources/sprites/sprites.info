@@ -18,6 +18,12 @@ environment/door/prop-door-intact.png,46,56
 environment/door/prop-door-damaged.png,46,56
 environment/door/prop-door-destroyed.png,46,56
 
+#bomb
+environment/bomb/prop-bomb-intact.png,13,16
+environment/bomb/prop-bomb-damaged.png,52,55
+environment/bomb/prop-bomb-destroyed.png,52,55
+
+
 #particles
 player/particles/player-jump-particles.png,176,160
 player/particles/player-fall-particles.png,176,160
