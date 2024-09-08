@@ -20,7 +20,7 @@ public class FallParticleEmitter extends Emitter {
 
         this.particleSprite = Resources.spritesheets().get("player-fall-particles");
         double x = player.getCollisionBox().getCenterX();
-        double y = player.getCollisionBox().getMinY() + particleSprite.getSpriteHeight() / 8d;
+        double y = player.getCollisionBox().getMinY() + particleSprite.getSpriteHeight() / 16d;
 
         setLocation(x, y);
     }

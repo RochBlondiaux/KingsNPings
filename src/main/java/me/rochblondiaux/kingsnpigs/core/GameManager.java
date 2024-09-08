@@ -58,7 +58,7 @@ public class GameManager {
                     Game.loop().perform(750, () -> {
                         door.setDoorState(Door.State.OPENING);
 
-                        Game.loop().perform(200, () -> {
+                        Game.loop().perform(350, () -> {
                             player.setVisible(true);
                             player.animations().play("player-doorout-right");
                         });
@@ -80,7 +80,7 @@ public class GameManager {
         });
 
         // Load the game world
-        world.setGravity(400);
+        world.setGravity(250);
         world.loadEnvironment("level_0");
     }
 }

@@ -31,10 +31,10 @@ public class WalkParticleSpawner implements IMobileEntity.EntityMovedListener {
         Spritesheet walkDustSprite = Resources.spritesheets().get("player-walk-particles");
         this.lastWalkDust = Game.loop().getTicks();
 
-        double x = event.getEntity().getCollisionBoxCenter().getX() - walkDustSprite.getSpriteWidth() / 4.0;
+        double x = event.getEntity().getCollisionBoxCenter().getX() - walkDustSprite.getSpriteWidth() / 8d;
         if (event.getEntity() instanceof Creature creature && creature.getFacingDirection().equals(Direction.LEFT))
-            x = event.getEntity().getCollisionBoxCenter().getX() + walkDustSprite.getSpriteWidth() / 4.0;
-        double y = event.getEntity().getCollisionBox().getMinY() + walkDustSprite.getSpriteHeight() / 8.0;
+            x = event.getEntity().getCollisionBoxCenter().getX() + walkDustSprite.getSpriteWidth() / 8d;
+        double y = event.getEntity().getCollisionBox().getMinY() + walkDustSprite.getSpriteHeight() / 16d;
         Point2D walkLocation = new Point2D.Double(x, y);
 
         Emitter walkDust = new Emitter(walkLocation);

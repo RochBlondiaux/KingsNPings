@@ -16,17 +16,17 @@ import me.rochblondiaux.kingsnpigs.entities.controller.PlayerMovementController;
 import me.rochblondiaux.kingsnpigs.entities.emitter.FallParticleEmitter;
 import me.rochblondiaux.kingsnpigs.entities.emitter.WalkParticleSpawner;
 
-@EntityInfo(width = 41, height = 41)
-@CollisionInfo(collision = true, collisionBoxWidth = 36, collisionBoxHeight = 38)
+@EntityInfo(width = 35, height = 40)
+@CollisionInfo(collision = true, collisionBoxWidth = 20, collisionBoxHeight = 39)
 @MovementInfo(velocity = 250)
 @AnimationInfo(spritePrefix = "player")
 @Getter
 public class Player extends Creature implements IUpdateable {
 
     private static Player instance;
-    private static final int MAX_ADDITIONAL_JUMPS = 2;
+    private static final int MAX_ADDITIONAL_JUMPS = 1;
 
-    private JumpAbility jumpAbility;
+    private final JumpAbility jumpAbility;
 
     // State
     private int consecutiveJumps = 0;

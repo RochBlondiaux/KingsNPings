@@ -1,88 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <litidata version="1.0">
  <maps>
-  <map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="17" height="8" tilewidth="32" tileheight="32" infinite="0" parallaxoriginx="0.0" parallaxoriginy="0.0" backgroundcolor="#696a79" nextlayerid="3" nextobjectid="1" name="level_0">
+  <map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="25" height="9" tilewidth="32" tileheight="32" infinite="0" parallaxoriginx="0.0" parallaxoriginy="0.0" backgroundcolor="#696a79" nextlayerid="5" nextobjectid="1" name="level_0">
    <properties>
-    <property name="AMBIENTLIGHT" value="#00ffffff"/>
-    <property name="GRAVITY" type="int" value="300"/>
+    <property name="GRAVITY" type="int" value="0"/>
    </properties>
    <tileset firstgid="1" name="Terrain" tilewidth="32" tileheight="32" tilecount="247" columns="19" objectalignment="topleft">
-    <image source="..\..\..\assets\14-TileSets\Terrain (32x32).png" width="608" height="416"/>
+    <image source="../../../assets/14-TileSets/Terrain (32x32).png" width="608" height="416"/>
    </tileset>
    <tileset firstgid="248" name="Decorations" tilewidth="32" tileheight="32" tilecount="42" columns="7" objectalignment="topleft">
-    <image source="..\..\..\assets\14-TileSets\Decorations (32x32).png" width="224" height="192"/>
+    <image source="../../../assets/14-TileSets/Decorations (32x32).png" width="224" height="192"/>
    </tileset>
-   <objectgroup id="0" name="misc" visible="1">
-    <object id="11" name="spawnpoint" type="SPAWNPOINT" x="89" y="122" width="32" height="32">
-     <properties>
-      <property name="collisionAlign" value="CENTER"/>
-      <property name="collisionType" value="DYNAMIC"/>
-      <property name="collisionValign" value="MIDDLE"/>
-      <property name="collisionboxHeight" value="32.0"/>
-      <property name="collisionboxWidth" value="32.0"/>
-      <property name="renderType" value="NORMAL"/>
-      <property name="spawnDirection" value="DOWN"/>
-      <property name="spawnPivot" value="DIMENSION_CENTER"/>
-     </properties>
-    </object>
-    <object id="13" type="PROP" x="480" y="67" width="32" height="29">
-     <properties>
-      <property name="addShadow" type="bool" value="false"/>
-      <property name="collision" type="bool" value="true"/>
-      <property name="collisionAlign" value="CENTER"/>
-      <property name="collisionType" value="DYNAMIC"/>
-      <property name="collisionValign" value="MIDDLE"/>
-      <property name="collisionboxHeight" value="29.0"/>
-      <property name="collisionboxWidth" value="32.0"/>
-      <property name="flipHorizontally" type="bool" value="false"/>
-      <property name="flipVertically" type="bool" value="false"/>
-      <property name="indestructible" type="bool" value="false"/>
-      <property name="material" value="WOOD"/>
-      <property name="renderType" value="NORMAL"/>
-      <property name="rotationSprite" value="NONE"/>
-      <property name="scaling" type="bool" value="true"/>
-      <property name="spritesheetName" value="box"/>
-     </properties>
-    </object>
-    <object id="14" type="PROP" x="379" y="195.5" width="32" height="29">
-     <properties>
-      <property name="addShadow" type="bool" value="false"/>
-      <property name="collision" type="bool" value="true"/>
-      <property name="collisionAlign" value="CENTER"/>
-      <property name="collisionType" value="DYNAMIC"/>
-      <property name="collisionValign" value="MIDDLE"/>
-      <property name="collisionboxHeight" value="29.0"/>
-      <property name="collisionboxWidth" value="32.0"/>
-      <property name="flipHorizontally" type="bool" value="false"/>
-      <property name="flipVertically" type="bool" value="false"/>
-      <property name="indestructible" type="bool" value="false"/>
-      <property name="material" value="WOOD"/>
-      <property name="renderType" value="NORMAL"/>
-      <property name="rotationSprite" value="NONE"/>
-      <property name="scaling" type="bool" value="true"/>
-      <property name="spritesheetName" value="box"/>
-     </properties>
-    </object>
-    <object id="15" type="PROP" x="375" y="166.5" width="32" height="29">
-     <properties>
-      <property name="addShadow" type="bool" value="false"/>
-      <property name="collision" type="bool" value="true"/>
-      <property name="collisionAlign" value="CENTER"/>
-      <property name="collisionType" value="DYNAMIC"/>
-      <property name="collisionValign" value="MIDDLE"/>
-      <property name="collisionboxHeight" value="29.0"/>
-      <property name="collisionboxWidth" value="32.0"/>
-      <property name="flipHorizontally" type="bool" value="false"/>
-      <property name="flipVertically" type="bool" value="false"/>
-      <property name="indestructible" type="bool" value="false"/>
-      <property name="material" value="WOOD"/>
-      <property name="renderType" value="NORMAL"/>
-      <property name="rotationSprite" value="NONE"/>
-      <property name="scaling" type="bool" value="true"/>
-      <property name="spritesheetName" value="box"/>
-     </properties>
-    </object>
-    <object id="17" name="start" type="PROP" x="83" y="87" width="46" height="65">
+   <objectgroup id="0" name="props" visible="1">
+    <object id="17" name="start" type="PROP" x="42" y="123" width="46" height="56">
      <properties>
       <property name="addShadow" type="bool" value="false"/>
       <property name="collision" type="bool" value="false"/>
@@ -92,22 +22,128 @@
       <property name="collisionboxHeight" type="float" value="22.400000000000002"/>
       <property name="collisionboxWidth" type="float" value="18.400000000000002"/>
       <property name="indestructible" type="bool" value="true"/>
-      <property name="material" value="WOOD"/>
+      <property name="material" value="UNDEFINED"/>
       <property name="renderType" value="NORMAL"/>
       <property name="rotationSprite" value="NONE"/>
-      <property name="scaling" type="bool" value="false"/>
       <property name="spritesheetName" value="door"/>
      </properties>
     </object>
+    <object id="18" name="spawnpoint" type="SPAWNPOINT" x="61" y="146" width="16" height="16">
+     <properties>
+      <property name="collisionAlign" value="CENTER"/>
+      <property name="collisionType" value="DYNAMIC"/>
+      <property name="collisionValign" value="MIDDLE"/>
+      <property name="renderType" value="NORMAL"/>
+      <property name="spawnDirection" value="DOWN"/>
+      <property name="spawnPivot" value="DIMENSION_CENTER"/>
+     </properties>
+    </object>
+    <object id="20" type="PROP" x="32" y="176" width="21" height="16">
+     <properties>
+      <property name="addShadow" type="bool" value="false"/>
+      <property name="collision" type="bool" value="false"/>
+      <property name="collisionAlign" value="CENTER"/>
+      <property name="collisionType" value="DYNAMIC"/>
+      <property name="collisionValign" value="MIDDLE"/>
+      <property name="collisionboxHeight" type="float" value="6.4"/>
+      <property name="collisionboxWidth" type="float" value="8.4"/>
+      <property name="indestructible" type="bool" value="false"/>
+      <property name="material" value="WOOD"/>
+      <property name="renderType" value="NORMAL"/>
+      <property name="rotationSprite" value="NONE"/>
+      <property name="spritesheetName" value="box"/>
+     </properties>
+    </object>
+    <object id="22" type="PROP" x="643" y="166" width="29" height="26">
+     <properties>
+      <property name="addShadow" type="bool" value="false"/>
+      <property name="collision" type="bool" value="true"/>
+      <property name="collisionAlign" value="CENTER"/>
+      <property name="collisionType" value="DYNAMIC"/>
+      <property name="collisionValign" value="MIDDLE"/>
+      <property name="collisionboxHeight" value="26.0"/>
+      <property name="collisionboxWidth" value="29.0"/>
+      <property name="indestructible" type="bool" value="false"/>
+      <property name="material" value="UNDEFINED"/>
+      <property name="renderType" value="NORMAL"/>
+      <property name="rotationSprite" value="NONE"/>
+      <property name="scaling" type="bool" value="true"/>
+      <property name="spritesheetName" value="box"/>
+     </properties>
+    </object>
+    <object id="23" type="PROP" x="645.5" y="140" width="29" height="26">
+     <properties>
+      <property name="addShadow" type="bool" value="false"/>
+      <property name="collision" type="bool" value="true"/>
+      <property name="collisionAlign" value="CENTER"/>
+      <property name="collisionType" value="DYNAMIC"/>
+      <property name="collisionValign" value="MIDDLE"/>
+      <property name="collisionboxHeight" value="26.0"/>
+      <property name="collisionboxWidth" value="29.0"/>
+      <property name="indestructible" type="bool" value="false"/>
+      <property name="material" value="UNDEFINED"/>
+      <property name="renderType" value="NORMAL"/>
+      <property name="rotationSprite" value="NONE"/>
+      <property name="scaling" type="bool" value="true"/>
+      <property name="spritesheetName" value="box"/>
+     </properties>
+    </object>
+    <object id="25" type="PROP" x="734" y="166" width="29" height="26">
+     <properties>
+      <property name="addShadow" type="bool" value="false"/>
+      <property name="collision" type="bool" value="true"/>
+      <property name="collisionAlign" value="CENTER"/>
+      <property name="collisionType" value="DYNAMIC"/>
+      <property name="collisionValign" value="MIDDLE"/>
+      <property name="collisionboxHeight" value="26.0"/>
+      <property name="collisionboxWidth" value="29.0"/>
+      <property name="indestructible" type="bool" value="false"/>
+      <property name="material" value="UNDEFINED"/>
+      <property name="renderType" value="NORMAL"/>
+      <property name="rotationSprite" value="NONE"/>
+      <property name="scaling" type="bool" value="true"/>
+      <property name="spritesheetName" value="box"/>
+     </properties>
+    </object>
+    <object id="27" type="PROP" x="349" y="134" width="29" height="26">
+     <properties>
+      <property name="addShadow" type="bool" value="false"/>
+      <property name="collision" type="bool" value="true"/>
+      <property name="collisionAlign" value="CENTER"/>
+      <property name="collisionType" value="DYNAMIC"/>
+      <property name="collisionValign" value="MIDDLE"/>
+      <property name="collisionboxHeight" value="26.0"/>
+      <property name="collisionboxWidth" value="29.0"/>
+      <property name="indestructible" type="bool" value="false"/>
+      <property name="material" value="UNDEFINED"/>
+      <property name="renderType" value="NORMAL"/>
+      <property name="rotationSprite" value="NONE"/>
+      <property name="scaling" type="bool" value="true"/>
+      <property name="spritesheetName" value="box"/>
+     </properties>
+    </object>
    </objectgroup>
-   <layer id="1" name="Terrain" width="17" height="8">
-    <data encoding="csv">21,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,23,40,135,136,136,136,136,136,136,136,136,136,136,136,136,136,137,42,40,154,155,155,155,155,141,174,174,174,174,174,174,174,174,175,42,40,154,155,155,155,155,156,27,60,60,60,60,60,60,60,60,61,40,173,174,174,174,142,156,46,22,22,22,22,22,23,0,0,0,59,60,60,60,28,154,160,136,136,136,136,136,137,42,0,0,0,0,0,0,0,40,173,174,174,174,174,174,174,175,42,0,0,0,0,0,0,0,59,60,60,60,60,60,60,60,60,61,0,0,0</data>
+   <layer id="1" name="Terrain" width="25" height="9">
+    <data encoding="csv">41,41,41,41,27,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,28,27,60,60,60,61,135,136,136,136,136,136,136,136,136,136,136,136,136,136,136,136,136,136,137,40,42,135,136,136,136,161,155,155,155,155,155,155,155,155,155,155,155,155,155,155,155,155,155,156,40,42,154,155,155,155,155,155,155,155,155,155,155,155,155,155,155,155,141,174,174,142,155,155,156,40,42,154,155,155,155,155,155,155,155,155,155,155,155,155,155,155,155,156,21,23,154,155,155,156,40,42,173,174,174,174,142,155,155,155,155,155,155,155,155,155,155,155,156,40,42,173,174,174,175,40,46,22,22,22,23,154,155,155,155,155,155,155,155,155,155,155,155,156,40,46,22,22,22,22,47,41,41,41,41,42,173,174,174,174,174,174,174,174,174,174,174,174,175,40,41,41,41,41,41,41,41,41,41,41,46,22,22,22,22,22,22,22,22,22,22,22,22,22,47,41,41,41,41,41,41</data>
    </layer>
-   <layer id="2" name="Decorations" width="17" height="8">
-    <data encoding="csv">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,256,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,263,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,277,0,0,0,0,260,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</data>
+   <layer id="2" name="Decorations_1" width="25" height="9">
+    <data encoding="csv">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,256,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,257,258,259,0,263,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,270,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,264,266,0,0,0,0,257,260,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,260,257,258,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</data>
+   </layer>
+   <layer id="3" name="Decorations_2" width="25" height="9">
+    <data encoding="csv">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,289,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,289,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,289,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,258,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,257,258,260,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</data>
+   </layer>
+   <layer id="4" name="Decorations_3" width="25" height="9">
+    <data encoding="csv">0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,259,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,259,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</data>
    </layer>
    <objectgroup id="0" name="collisions" visible="1">
-    <object id="1" type="COLLISIONBOX" x="0" y="0" width="544" height="32">
+    <object id="1" type="COLLISIONBOX" x="160" y="0" width="640" height="32">
+     <properties>
+      <property name="collisionAlign" value="CENTER"/>
+      <property name="collisionType" value="STATIC"/>
+      <property name="renderType" value="NORMAL"/>
+     </properties>
+    </object>
+    <object id="2" type="COLLISIONBOX" x="320" y="160" width="64" height="12">
      <properties>
       <property name="collisionAlign" value="CENTER"/>
       <property name="collisionType" value="STATIC"/>
@@ -115,7 +151,7 @@
       <property name="renderType" value="NORMAL"/>
      </properties>
     </object>
-    <object id="2" type="COLLISIONBOX" x="512" y="32" width="32" height="64">
+    <object id="3" type="COLLISIONBOX" x="128" y="0" width="32" height="64">
      <properties>
       <property name="collisionAlign" value="CENTER"/>
       <property name="collisionType" value="STATIC"/>
@@ -123,7 +159,7 @@
       <property name="renderType" value="NORMAL"/>
      </properties>
     </object>
-    <object id="3" type="COLLISIONBOX" x="224" y="96" width="320" height="32">
+    <object id="4" type="COLLISIONBOX" x="0" y="32" width="128" height="32">
      <properties>
       <property name="collisionAlign" value="CENTER"/>
       <property name="collisionType" value="STATIC"/>
@@ -131,7 +167,7 @@
       <property name="renderType" value="NORMAL"/>
      </properties>
     </object>
-    <object id="4" type="COLLISIONBOX" x="224" y="128" width="224" height="32">
+    <object id="5" type="COLLISIONBOX" x="0" y="64" width="32" height="160">
      <properties>
       <property name="collisionAlign" value="CENTER"/>
       <property name="collisionType" value="STATIC"/>
@@ -139,7 +175,7 @@
       <property name="renderType" value="NORMAL"/>
      </properties>
     </object>
-    <object id="5" type="COLLISIONBOX" x="416" y="160" width="32" height="64">
+    <object id="6" type="COLLISIONBOX" x="32" y="192" width="128" height="32">
      <properties>
       <property name="collisionAlign" value="CENTER"/>
       <property name="collisionType" value="STATIC"/>
@@ -147,7 +183,7 @@
       <property name="renderType" value="NORMAL"/>
      </properties>
     </object>
-    <object id="6" type="COLLISIONBOX" x="128" y="224" width="320" height="32">
+    <object id="7" type="COLLISIONBOX" x="128" y="224" width="32" height="64">
      <properties>
       <property name="collisionAlign" value="CENTER"/>
       <property name="collisionType" value="STATIC"/>
@@ -155,7 +191,7 @@
       <property name="renderType" value="NORMAL"/>
      </properties>
     </object>
-    <object id="7" type="COLLISIONBOX" x="128" y="192" width="32" height="32">
+    <object id="8" type="COLLISIONBOX" x="160" y="256" width="448" height="32">
      <properties>
       <property name="collisionAlign" value="CENTER"/>
       <property name="collisionType" value="STATIC"/>
@@ -163,25 +199,59 @@
       <property name="renderType" value="NORMAL"/>
      </properties>
     </object>
-    <object id="8" type="COLLISIONBOX" x="32" y="160" width="128" height="32">
+    <object id="9" type="COLLISIONBOX" x="576" y="128" width="32" height="128">
      <properties>
       <property name="collisionAlign" value="CENTER"/>
       <property name="collisionType" value="STATIC"/>
       <property name="collisionValign" value="MIDDLE"/>
-      <property name="collisionboxWidth" value="128.0"/>
       <property name="renderType" value="NORMAL"/>
      </properties>
     </object>
-    <object id="9" type="COLLISIONBOX" x="0" y="32" width="32" height="160">
+    <object id="10" type="COLLISIONBOX" x="608" y="128" width="32" height="96">
      <properties>
       <property name="collisionAlign" value="CENTER"/>
       <property name="collisionType" value="STATIC"/>
       <property name="collisionValign" value="MIDDLE"/>
-      <property name="collisionboxHeight" value="160.0"/>
       <property name="renderType" value="NORMAL"/>
      </properties>
     </object>
-    <object id="10" type="COLLISIONBOX" x="193" y="96" width="32" height="7">
+    <object id="11" type="COLLISIONBOX" x="640" y="192" width="160" height="32">
+     <properties>
+      <property name="collisionAlign" value="CENTER"/>
+      <property name="collisionType" value="STATIC"/>
+      <property name="collisionValign" value="MIDDLE"/>
+      <property name="renderType" value="NORMAL"/>
+     </properties>
+    </object>
+    <object id="12" type="COLLISIONBOX" x="768" y="32" width="32" height="160">
+     <properties>
+      <property name="collisionAlign" value="CENTER"/>
+      <property name="collisionType" value="STATIC"/>
+      <property name="collisionValign" value="MIDDLE"/>
+      <property name="renderType" value="NORMAL"/>
+     </properties>
+    </object>
+    <object id="13" type="COLLISIONBOX" x="512" y="160" width="64" height="7">
+     <properties>
+      <property name="collisionAlign" value="CENTER"/>
+      <property name="collisionType" value="STATIC"/>
+      <property name="collisionValign" value="MIDDLE"/>
+      <property name="collisionboxHeight" value="32.0"/>
+      <property name="collisionboxWidth" value="32.0"/>
+      <property name="renderType" value="NORMAL"/>
+     </properties>
+    </object>
+    <object id="14" type="COLLISIONBOX" x="480" y="224" width="96" height="7">
+     <properties>
+      <property name="collisionAlign" value="CENTER"/>
+      <property name="collisionType" value="STATIC"/>
+      <property name="collisionValign" value="MIDDLE"/>
+      <property name="collisionboxHeight" value="32.0"/>
+      <property name="collisionboxWidth" value="32.0"/>
+      <property name="renderType" value="NORMAL"/>
+     </properties>
+    </object>
+    <object id="15" type="COLLISIONBOX" x="608" y="64" width="96" height="7">
      <properties>
       <property name="collisionAlign" value="CENTER"/>
       <property name="collisionType" value="STATIC"/>
@@ -237,6 +307,15 @@
   <sprite width="78" height="58" imageformat="PNG" name="player-walk-right">
    <image>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</image>
   </sprite>
+  <sprite width="52" height="55" imageformat="PNG" name="prop-bomb-damaged">
+   <image>iVBORw0KGgoAAAANSUhEUgAAANAAAAA3CAYAAAB95cROAAACEklEQVR4Xu3WMUoEQRCF4TmWmWcw8ghGXkIwULyCYCYbGJoaCHoADQwNPIBgoGFLLVtDU/T2DoLYr/w/aNSZHehnVdfONAEAAAAAAAAAAAAAAAAAAAAAAAAAALj7p+fy8fVZ7Ge8p8iyxGs1zxuvq8uaa3j2T/cV7ynqDQJvsixZpWUpRO8biKmGX7Ot6TL5DxkxECY28AP7ewfFVrxu3u5OS3lfNe8py5hpdCnfCOqD0zpEio3WGwj4e636WJ/ZsK6vDc+DxDDKdg0ERbFGikPNbcsh96ZjQR5eX8r142M5Pr+cCyQ5CTYYCGNLU586SFxyk2DD9t4aCKpiXTLkSVEf2/jJ1U25WN3Oy/62UIdHZ5LBYqO1mk5pMNTN5ku56WJNWvWRYBu2QlhBrEB2eOx35UNke10yEJQOz67ln1XItLQ+w/PDY5v36VaHsmX3fdIpBPNMWQZCq9mUmy5VfTxMLIzqAco2EFrNVjecWtNlq0/aAxQzKOZZ0myqmeL+FbOs1UWKQWz5dFMJlCnPriwZMyllWbMN2ld/K1Qdxl8PRg+UKU8vS8ZMalnWfJMeqrXqMKMHypRnSZaMmVSyzHqh5MJMufL0smTMpJZlVm9624rPjCzuvbXiM6OK++6t+Oyo4r5bKz4zvBhAOsyUK0/cf2vFZ0YX96+cBQAAAAAAAAAAAAAAAAAAAAAAAACAoXwDmSilIRJsW48AAAAASUVORK5CYII=</image>
+  </sprite>
+  <sprite width="52" height="55" imageformat="PNG" name="prop-bomb-destroyed">
+   <image>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</image>
+  </sprite>
+  <sprite width="13" height="16" imageformat="PNG" name="prop-bomb-intact">
+   <image>iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AAAAnklEQVR4XrWQsQ2AMAwEGYuOGagYgYol6ECsgESHKCgZgaxAyShBH+mRMTHQ8NJLSfwnx06SB2Vp7mH9bkqGP4Hs8CkMIbjumx+d81Xbv4Oyg7bOBqFQD7PvpuU07uhWlM0dxAOK+BK+BgBnEySAImeR3WDUOV8ACengf5BeAs2ZbhCGjIES4CJOSIIxSyBA3KAFRgFKFixfAEqHLOAATilRL8taJaMAAAAASUVORK5CYII=</image>
+  </sprite>
   <sprite width="40" height="33" imageformat="PNG" name="prop-box-destroyed">
    <image>iVBORw0KGgoAAAANSUhEUgAAAFAAAAAhCAYAAABObyzJAAABsUlEQVR4Xu2ZTUrEQBCF51juPIJ4BVeCJ/AC4hHcuPIObga8g/tZu9SVbkcqTEnx0fkh/SbSTX3wyGRI9Uu9/JHObtc4lxfXxylx+yRgAX0d3gZ9vD4Ny/ifr7MuOWHhWHBTygAn4OU6JtYlJyyc94f7QQwtA1yAhWOX6eH58S+s/c3doNrweBBKYk1zeIB+ryudjaxZitXaQ8jH9IPkv32ddU1hDVgjMUBFeIYfHA+wpFqPf4cBqsIzON6YWNcUbEbZEMd9ubodln5/9SXrkgBDtNA8yC4u4S1giFHcNkmSJEnOy+f3z1Eljl2CT76mn34MQCF6EAvsXG8bm8PmFaIHsaDihEGcedkiRB60Kl82rxA9CANUThjMwdCq30LYvEL0ILaj8fuGvU5tEWIpPH//XT2VxeYVogdhIyWxphaOPybWzcLmFaIHsR3lhyKfhV59Jszgnnam+xlPrfJl8wrRg9iOxrD8iRzvi6ypJQboip8KVk9lsXmF6FGCl04Ut1VBH4rbL4LNK0SPrmHzCtGja9i8QvToGjavED26hs0rRI+uYfMK0aN7GECNOHaL/AIYM2Z+FhitLgAAAABJRU5ErkJggg==</image>
   </sprite>
@@ -256,20 +335,18 @@
  <tilesets/>
  <emitters/>
  <blueprints>
-  <blueprint id="0" name="box" type="AREA" width="32" height="29">
-   <object id="14" type="PROP" x="0" y="0" width="32" height="29">
+  <blueprint id="0" name="box" type="AREA" width="29" height="26">
+   <object id="23" type="PROP" x="0" y="0" width="29" height="26">
     <properties>
      <property name="addShadow" type="bool" value="false"/>
      <property name="collision" type="bool" value="true"/>
      <property name="collisionAlign" value="CENTER"/>
      <property name="collisionType" value="DYNAMIC"/>
      <property name="collisionValign" value="MIDDLE"/>
-     <property name="collisionboxHeight" value="29.0"/>
-     <property name="collisionboxWidth" value="32.0"/>
-     <property name="flipHorizontally" type="bool" value="false"/>
-     <property name="flipVertically" type="bool" value="false"/>
+     <property name="collisionboxHeight" value="26.0"/>
+     <property name="collisionboxWidth" value="29.0"/>
      <property name="indestructible" type="bool" value="false"/>
-     <property name="material" value="WOOD"/>
+     <property name="material" value="UNDEFINED"/>
      <property name="renderType" value="NORMAL"/>
      <property name="rotationSprite" value="NONE"/>
      <property name="scaling" type="bool" value="true"/>

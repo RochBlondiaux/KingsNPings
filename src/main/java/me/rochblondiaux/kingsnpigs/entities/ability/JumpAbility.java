@@ -19,7 +19,7 @@ import de.gurkenlabs.litiengine.physics.Force;
 import de.gurkenlabs.litiengine.physics.GravityForce;
 import de.gurkenlabs.litiengine.resources.Resources;
 
-@AbilityInfo(cooldown = 300, origin = EntityPivotType.COLLISIONBOX_CENTER, duration = 300, value = 800)
+@AbilityInfo(cooldown = 500, origin = EntityPivotType.COLLISIONBOX_CENTER, duration = 250, value = 500)
 public class JumpAbility extends Ability {
 
     /**
@@ -29,6 +29,7 @@ public class JumpAbility extends Ability {
      */
     public JumpAbility(Creature executor) {
         super(executor);
+
         this.addEffect(new JumpEffect(this));
         this.addEffect(new JumpParticleEffect(this));
     }
@@ -81,7 +82,8 @@ public class JumpAbility extends Ability {
          * @return True if the entity touches a static collision box above it.
          */
         private boolean isTouchingCeiling() {
-            return Game.world().environment()
+            return Game.world()
+                    .environment()
                     .getCollisionBoxes()
                     .stream()
                     .filter(x -> x.getBoundingBox().intersects(this.getAbility().getExecutor().getBoundingBox()))
