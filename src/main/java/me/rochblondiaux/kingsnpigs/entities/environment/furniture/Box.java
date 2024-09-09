@@ -1,4 +1,4 @@
-package me.rochblondiaux.kingsnpigs.entities.environment;
+package me.rochblondiaux.kingsnpigs.entities.environment.furniture;
 
 import de.gurkenlabs.litiengine.entities.AnimationInfo;
 import de.gurkenlabs.litiengine.entities.CollisionInfo;

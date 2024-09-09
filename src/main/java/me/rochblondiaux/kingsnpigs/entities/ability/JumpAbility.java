@@ -19,7 +19,7 @@ import de.gurkenlabs.litiengine.physics.Force;
 import de.gurkenlabs.litiengine.physics.GravityForce;
 import de.gurkenlabs.litiengine.resources.Resources;
 
-@AbilityInfo(cooldown = 500, origin = EntityPivotType.COLLISIONBOX_CENTER, duration = 250, value = 500)
+@AbilityInfo(cooldown = 500, origin = EntityPivotType.COLLISIONBOX_CENTER, duration = 250, value = 600)
 public class JumpAbility extends Ability {
 
     /**

@@ -11,8 +11,10 @@ import de.gurkenlabs.litiengine.graphics.LocationLockCamera;
 import de.gurkenlabs.litiengine.resources.Resources;
 import me.rochblondiaux.kingsnpigs.entities.Player;
 import me.rochblondiaux.kingsnpigs.entities.environment.Bomb;
-import me.rochblondiaux.kingsnpigs.entities.environment.Box;
-import me.rochblondiaux.kingsnpigs.entities.environment.Door;
+import me.rochblondiaux.kingsnpigs.entities.environment.collectible.Diamond;
+import me.rochblondiaux.kingsnpigs.entities.environment.collectible.Heart;
+import me.rochblondiaux.kingsnpigs.entities.environment.furniture.Box;
+import me.rochblondiaux.kingsnpigs.entities.environment.furniture.Door;
 
 public class GameManager {
 
@@ -29,6 +31,8 @@ public class GameManager {
         PropMapObjectLoader.registerCustomPropType(Box.class);
         PropMapObjectLoader.registerCustomPropType(Door.class);
         PropMapObjectLoader.registerCustomPropType(Bomb.class);
+        PropMapObjectLoader.registerCustomPropType(Diamond.class);
+        PropMapObjectLoader.registerCustomPropType(Heart.class);
 
         world.addListener(new EnvironmentListener() {
 

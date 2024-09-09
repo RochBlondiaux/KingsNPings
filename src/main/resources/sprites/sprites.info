@@ -23,6 +23,13 @@ environment/bomb/prop-bomb-intact.png,13,16
 environment/bomb/prop-bomb-damaged.png,52,55
 environment/bomb/prop-bomb-destroyed.png,52,55
 
+#diamond
+environment/diamond/prop-diamond-intact.png,18,14
+environment/diamond/prop-diamond-destroyed.png,18,14
+
+#heart
+environment/heart/prop-heart-intact.png,18,14
+environment/heart/prop-heart-destroyed.png,18,14
 
 #particles
 player/particles/player-jump-particles.png,176,160

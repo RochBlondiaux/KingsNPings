@@ -3,7 +3,7 @@ package me.rochblondiaux.kingsnpigs.entities.animation;
 import de.gurkenlabs.litiengine.graphics.animation.Animation;
 import de.gurkenlabs.litiengine.graphics.animation.AnimationListener;
 import de.gurkenlabs.litiengine.graphics.animation.EntityAnimationController;
-import me.rochblondiaux.kingsnpigs.entities.environment.Door;
+import me.rochblondiaux.kingsnpigs.entities.environment.furniture.Door;
 
 public class DoorAnimationController extends EntityAnimationController<Door> {
 

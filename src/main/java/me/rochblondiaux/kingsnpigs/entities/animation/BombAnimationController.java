@@ -13,7 +13,6 @@ public class BombAnimationController extends EntityAnimationController<Bomb> {
      */
     public BombAnimationController(Bomb prop) {
         super(prop);
-        scaleSprite(1.5f, 1.5f);
 
         this.setDefault(new Animation("prop-bomb-intact", false, false));
         this.add(new Animation("prop-bomb-damaged", false, false));
@@ -22,6 +21,5 @@ public class BombAnimationController extends EntityAnimationController<Bomb> {
         addRule(door -> door.getBombStatus().equals(Bomb.Status.OFF), door -> "prop-bomb-intact");
         addRule(door -> door.getBombStatus().equals(Bomb.Status.ON), door -> "prop-bomb-damaged");
         addRule(door -> door.getBombStatus().equals(Bomb.Status.EXPLODING), door -> "prop-bomb-destroyed");
-
     }
 }
