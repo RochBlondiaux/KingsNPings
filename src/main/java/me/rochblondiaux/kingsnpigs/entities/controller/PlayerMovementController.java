@@ -6,6 +6,7 @@ import de.gurkenlabs.litiengine.input.PlatformingMovementController;
 import me.rochblondiaux.kingsnpigs.entities.Player;
 
 public class PlayerMovementController extends PlatformingMovementController<Player> {
+
     public PlayerMovementController(Player entity) {
         super(entity);
     }

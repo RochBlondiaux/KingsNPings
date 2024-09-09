@@ -29,6 +29,9 @@ public class Player extends Creature implements IUpdateable {
     private final JumpAbility jumpAbility;
 
     // State
+    private int health = 3;
+    @Setter
+    private int diamonds = 0;
     private int consecutiveJumps = 0;
     private boolean onGround = false;
     @Setter
@@ -97,6 +100,12 @@ public class Player extends Creature implements IUpdateable {
     @Override
     protected IEntityAnimationController<?> createAnimationController() {
         return new PlayerAnimationController(this);
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+        if (this.health <= 0) // Player is dead
+            Game.world().environment().remove(this);
     }
 
 }

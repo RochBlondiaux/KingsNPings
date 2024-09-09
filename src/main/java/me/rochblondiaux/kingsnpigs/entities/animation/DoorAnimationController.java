@@ -14,7 +14,6 @@ public class DoorAnimationController extends EntityAnimationController<Door> {
      */
     public DoorAnimationController(Door prop) {
         super(prop);
-        scaleSprite(1.5f, 1.5f);
 
         this.setDefault(new Animation("prop-door-intact", false, false));
         this.add(new Animation("prop-door-damaged", false, false));
