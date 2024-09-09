@@ -2,14 +2,12 @@ package me.rochblondiaux.kingsnpigs.core;
 
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.entities.Spawnpoint;
-import de.gurkenlabs.litiengine.environment.Environment;
-import de.gurkenlabs.litiengine.environment.EnvironmentListener;
-import de.gurkenlabs.litiengine.environment.GameWorld;
-import de.gurkenlabs.litiengine.environment.PropMapObjectLoader;
+import de.gurkenlabs.litiengine.environment.*;
 import de.gurkenlabs.litiengine.graphics.Camera;
 import de.gurkenlabs.litiengine.graphics.LocationLockCamera;
 import de.gurkenlabs.litiengine.resources.Resources;
 import me.rochblondiaux.kingsnpigs.entities.Player;
+import me.rochblondiaux.kingsnpigs.entities.enemies.Pig;
 import me.rochblondiaux.kingsnpigs.entities.environment.Bomb;
 import me.rochblondiaux.kingsnpigs.entities.environment.collectible.Diamond;
 import me.rochblondiaux.kingsnpigs.entities.environment.collectible.Heart;
@@ -33,6 +31,9 @@ public class GameManager {
         PropMapObjectLoader.registerCustomPropType(Bomb.class);
         PropMapObjectLoader.registerCustomPropType(Diamond.class);
         PropMapObjectLoader.registerCustomPropType(Heart.class);
+
+        // Creature
+        CreatureMapObjectLoader.registerCustomCreatureType(Pig.class);
 
         world.addListener(new EnvironmentListener() {
 

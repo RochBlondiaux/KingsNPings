@@ -8,6 +8,18 @@ player/player-ground-right.png,78,58
 player/player-doorin-right.png,78,58
 player/player-doorout-right.png,78,58
 player/player-dead-right.png,78,58
+player/player-attack-right.png,78,58
+player/player-hit-right.png,78,58
+
+#pig
+enemies/pig/pig-idle-right.png,35,30
+enemies/pig/pig-walk-right.png,35,30
+enemies/pig/pig-dead-right.png,35,30
+enemies/pig/pig-fall-right.png,35,30
+enemies/pig/pig-ground-right.png,35,30
+enemies/pig/pig-attack-right.png,35,30
+enemies/pig/pig-hit-right.png,35,30
+enemies/pig/pig-jump-right.png,35,30
 
 #box
 environment/box/prop-box-intact.png,21,16

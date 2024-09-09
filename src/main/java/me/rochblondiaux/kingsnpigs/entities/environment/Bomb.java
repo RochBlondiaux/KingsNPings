@@ -22,7 +22,6 @@ public class Bomb extends Prop {
         super("bomb");
         this.bombStatus = Status.OFF;
 
-
         // Controllers
         addController(new BombBehavior(this));
 

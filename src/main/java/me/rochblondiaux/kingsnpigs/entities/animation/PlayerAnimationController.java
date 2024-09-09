@@ -18,6 +18,9 @@ public class PlayerAnimationController extends CreatureAnimationController<Playe
         registerAnimations("ground");
         registerAnimations("doorin");
         registerAnimations("doorout");
+        registerAnimations("attack");
+        registerAnimations("hit");
+        registerAnimations("dead");
 
         // Rules
         addRule(player -> player.movement().getVelocity() == 0, player -> "player-idle-%s".formatted(player.getFacingDirection().toString().toLowerCase()));

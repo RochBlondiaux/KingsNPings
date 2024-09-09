@@ -17,6 +17,7 @@ import de.gurkenlabs.litiengine.gui.screens.ScreenManager;
 import de.gurkenlabs.litiengine.resources.Resources;
 import lombok.extern.log4j.Log4j2;
 import me.rochblondiaux.kingsnpigs.core.GameManager;
+import me.rochblondiaux.kingsnpigs.input.UserInput;
 import me.rochblondiaux.kingsnpigs.screen.InGameScreen;
 import me.rochblondiaux.kingsnpigs.utils.ErrorUtils;
 import me.rochblondiaux.kingsnpigs.utils.WindowUtils;
@@ -38,6 +39,8 @@ public class KingsNPigs {
         this.registerScreens();
 
         GameManager.launchGame();
+
+        UserInput.init();
 
         log.info("Starting game engine...");
         Game.start();

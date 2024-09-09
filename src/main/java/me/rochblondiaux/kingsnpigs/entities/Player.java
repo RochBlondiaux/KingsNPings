@@ -20,6 +20,7 @@ import me.rochblondiaux.kingsnpigs.entities.emitter.WalkParticleSpawner;
 @CollisionInfo(collision = true, collisionBoxWidth = 20, collisionBoxHeight = 39)
 @MovementInfo(velocity = 250)
 @AnimationInfo(spritePrefix = "player")
+@CombatInfo(hitpoints = 3)
 @Getter
 public class Player extends Creature implements IUpdateable {
 
@@ -48,7 +49,6 @@ public class Player extends Creature implements IUpdateable {
         this.jumpAbility = new JumpAbility(this);
         this.controlsEnabled = true;
 
-        getHitPoints().setBaseValue(3);
         animations().scaleSprite(1.5f);
 
         onMoved(new WalkParticleSpawner());
